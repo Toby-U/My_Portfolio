@@ -1,0 +1,176 @@
+/* === TopBar / Navigation === */
+
+/* Theme button */
+#theme-switch {
+  height: 44px;
+  width: 44px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--btn-primary-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+#theme-switch:hover {
+  background-color: var(--btn-primary-hover);
+  transform: scale(1.05);
+}
+
+/* Navigation Bar */
+li, a, button {
+  font-family: 'Roboto', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+header {
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0;
+  background-color: var(--nav-item-bg);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.nav-links li:hover {
+  background-color: var(--nav-item-hover);
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+  padding: 0.6rem 1rem;
+  display: block;
+  border-radius: 12px;
+  color: var(--text-inverse);
+}
+
+.nav-links li a:hover {
+  color: var(--text-inverse);
+}
+
+/* Theme switch icon visibility */
+#theme-switch img:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch img:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch img:last-child {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+/* Only constrain nav on large screens */
+@media (min-width: 1441px) {
+  nav {
+    background-color: var(--bg-secondary);
+    backdrop-filter: none;
+  }
+  
+  .nav-wrapper {
+    max-width: 1440px;
+    box-sizing: border-box;
+    background-color: var(--bg-primary);
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .nav-links li a {
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+  }
+  
+  .nav-links {
+    gap: 0.35rem;
+  }
+  
+  #theme-switch {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .nav-wrapper {
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .nav-links li a {
+    padding: 0.4rem 0.5rem;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  
+  .nav-links li {
+    border-radius: 8px;
+  }
+  
+  .nav-links {
+    gap: 0.25rem;
+  }
+  
+  #theme-switch {
+    height: 36px;
+    width: 36px;
+  }
+  
+  #theme-switch img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+  .nav-links li a {
+    padding: 0.35rem 0.4rem;
+    font-size: 11px;
+  }
+  
+  #theme-switch {
+    height: 32px;
+    width: 32px;
+  }
+}

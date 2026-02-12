@@ -1,20 +1,22 @@
 
-import TopBar from './TopBar.tsx'
-import LandingPage from './LandingPage.tsx'
-import Skills from './Skills.tsx'
-import Projects from './Projects.tsx' 
-import Contact from './Contact.tsx'
+import TopBar from './component/topbar/TopBar.tsx'
+import LandingPage from './component/Landing_page/LandingPage.tsx'
+import Skills from './component/skills/Skills.tsx'
+import Projects from './component/Projects/Projects.tsx' 
+import Contact from './component/contact/Contact.tsx'
+import Footer from './component/footer/Footer.tsx'
 
 function App() {
 
 
   return (
     <>
-      <TopBar/> <br/>
-      <LandingPage/><br/>
+      <TopBar/>
+      <LandingPage/>
       <Skills/>
       <Projects/>
       <Contact/>
+      <Footer/>
     </>
   )
 }

@@ -1,74 +1,100 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Tobenna Uzoewulu - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design** - Optimized for all screen sizes with a max-width of 1440px
+- **Light/Dark Mode** - Theme toggle with semantic color variables
+- **Modern UI** - Clean design with smooth animations and hover effects
+- **Project Carousel** - Interactive showcase of projects with navigation
+- **Contact Form** - Formspree integration for receiving messages, with social media links
+- **Skills Section** - Alternating grid layout highlighting education, technical skills, and teamwork
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Vite 7** - Build tool and dev server
+- **CSS Variables** - Theming and design system
+- **Formspree** - Contact form backend
+- **ESLint** - Code linting
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── App.tsx              # Main app component
+├── index.css            # Global styles & design system
+├── main.tsx             # Entry point
+└── component/
+    ├── topbar/          # Navigation bar with theme toggle
+    ├── Landing_page/    # Hero section
+    ├── skills/          # Skills showcase
+    ├── Projects/        # Project carousel
+    ├── contact/         # Contact form & social links
+    └── footer/          # Copyright footer
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Toby-U/tob_Portfolio.git
+
+# Navigate to project directory
+cd tob_Portfolio
+
+# Install dependencies
+npm install
 ```
-=======
-# My_Portfolio
-This is my portfolio. Written with Html, Css Typescript and very little react.
->>>>>>> 52712e02c1605949b78a900bd122f8da8b2166f4
+
+### Development
+
+```bash
+# Start development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Build
+
+```bash
+# Create production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Design System
+
+The portfolio uses CSS custom properties for consistent theming:
+
+### Color Palette
+
+- **Dark Wine** - Primary accent color
+- **Carmel** - Secondary accent
+- **Dark Coffee** - Backgrounds
+- **Chocolate Brown** - Text colors
+- **Light Apricot** - Highlights
+
+### Breakpoints
+
+- Extra small mobile: < 360px
+- Mobile: < 480px
+- Tablet: < 768px
+- Desktop: < 1440px
+- Large screens: > 1440px (centered with background color)
+
+## License
+
+© 2026 Tobenna Uzoewulu. All rights reserved.
