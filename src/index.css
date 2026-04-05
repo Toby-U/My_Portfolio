@@ -1,196 +1,222 @@
-/* === Global === */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --font-heading: 'Space Grotesk', 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --font-body: 'Manrope', 'Segoe UI', 'Gill Sans', sans-serif;
 
-  /* ========== COLOR PALETTE ========== */
-  --dark-wine: #6F1D1B;
-  --carmel: #BB9457;
-  --dark-coffee: #432818;
-  --chocolate-brown: #99582A;
-  --light-apricot: #FFE6A7;
-  
-  /* Palette variations (lighter/darker shades) */
-  --dark-wine-light: #8B3533;
-  --dark-wine-dark: #4F1412;
-  --carmel-light: #D4B07A;
-  --carmel-dark: #9A7840;
-  --chocolate-light: #B87A4A;
-  --chocolate-dark: #6E3D1B;
-  --apricot-soft: #FFF3D6;
-  --coffee-deep: #2D1A10;
-  /* ========== END PALETTE ========== */
+  --brand-100: #f0f0f0;
+  --brand-200: #e0e0e0;
+  --brand-500: #666666;
+  --brand-600: #4d4d4d;
+  --brand-700: #333333;
 
-  /* ===== SEMANTIC COLORS (Light Mode) ===== */
-  /* Backgrounds */
-  --bg-primary: var(--light-apricot);
-  --bg-secondary: var(--apricot-soft);
-  --bg-elevated: #FFFFFF;
-  --bg-card: #FFF8E8;
-  
-  /* Text */
-  --text-primary: var(--dark-coffee);
-  --text-secondary: var(--chocolate-brown);
-  --text-muted: var(--chocolate-light);
-  --text-inverse: var(--light-apricot);
-  
-  /* Buttons */
-  --btn-primary-bg: var(--dark-wine);
-  --btn-primary-text: var(--light-apricot);
-  --btn-primary-hover: var(--dark-wine-dark);
-  --btn-secondary-bg: var(--carmel);
-  --btn-secondary-text: var(--dark-coffee);
-  --btn-secondary-hover: var(--carmel-dark);
-  
-  /* Accents & Interactive */
-  --accent-primary: var(--dark-wine);
-  --accent-secondary: var(--carmel);
-  --link-color: var(--dark-wine);
-  --link-hover: var(--dark-wine-light);
-  
-  /* Borders & Shadows */
-  --border-color: var(--carmel);
-  --border-light: var(--carmel-light);
-  --shadow-color: rgba(67, 40, 24, 0.2);
-  --shadow-strong: rgba(67, 40, 24, 0.35);
-  
-  /* UI Elements */
-  --nav-bg: rgba(255, 230, 167, 0.95);
-  --nav-item-bg: var(--chocolate-brown);
-  --nav-item-hover: var(--dark-wine);
-  --header-bg: rgba(67, 40, 24, 0.1);
-  --card-shadow: var(--shadow-color);
+  --accent-200: #ebebeb;
+  --accent-500: #808080;
+
+  --neutral-0: #ffffff;
+  --neutral-50: #f5f7f8;
+  --neutral-100: #edf1f2;
+  --neutral-200: #d7e0e2;
+  --neutral-400: #7d8b91;
+  --neutral-700: #2f3d45;
+  --neutral-800: #223038;
+
+  --surface-page: #f7f7f7;
+  --surface-elevated: #ffffff;
+  --surface-soft: #f1f1f1;
+
+  --text-primary: #111111;
+  --text-secondary: #3d3d3d;
+  --text-tertiary: #6e6e6e;
+  --text-on-brand: #ffffff;
+
+  --border-subtle: #dfdfdf;
+  --border-strong: #c6c6c6;
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 14px 32px rgba(0, 0, 0, 0.1);
+
+  --bg-gradient-1: radial-gradient(circle at top left, rgba(0, 0, 0, 0.04), transparent 44%);
+  --bg-gradient-2: radial-gradient(circle at 80% 10%, rgba(0, 0, 0, 0.025), transparent 40%);
+  --topbar-bg: color-mix(in oklab, var(--surface-elevated) 86%, white 14%);
+
+  --max-content-width: 1120px;
+  --radius-button: 0.8rem;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+:root[data-theme='dark'] {
+  --brand-100: #171717;
+  --brand-200: #242424;
+  --brand-500: #8f8f8f;
+  --brand-600: #b0b0b0;
+  --brand-700: #cccccc;
+
+  --accent-200: #212121;
+  --accent-500: #9d9d9d;
+
+  --surface-page: #000000;
+  --surface-elevated: #121212;
+  --surface-soft: #1d1d1d;
+
+  --text-primary: #efefef;
+  --text-secondary: #cccccc;
+  --text-tertiary: #9f9f9f;
+  --text-on-brand: #000000;
+
+  --border-subtle: #303030;
+  --border-strong: #4a4a4a;
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --shadow-card-hover: 0 16px 34px rgba(0, 0, 0, 0.4);
+
+  --bg-gradient-1: radial-gradient(circle at top left, rgba(204, 204, 204, 0.08), transparent 42%);
+  --bg-gradient-2: radial-gradient(circle at 85% 8%, rgba(204, 204, 204, 0.04), transparent 40%);
+  --topbar-bg: color-mix(in oklab, var(--surface-elevated) 90%, black 10%);
 }
 
-/* ===== DARK MODE ===== */
-.darkmode {
-  /* Backgrounds */
-  --bg-primary: var(--dark-coffee);
-  --bg-secondary: var(--coffee-deep);
-  --bg-elevated: #543220;
-  --bg-card: #3D2415;
-  
-  /* Text */
-  --text-primary: var(--light-apricot);
-  --text-secondary: var(--carmel-light);
-  --text-muted: var(--carmel);
-  --text-inverse: var(--dark-coffee);
-  
-  /* Buttons */
-  --btn-primary-bg: var(--carmel);
-  --btn-primary-text: var(--dark-coffee);
-  --btn-primary-hover: var(--carmel-light);
-  --btn-secondary-bg: var(--chocolate-brown);
-  --btn-secondary-text: var(--light-apricot);
-  --btn-secondary-hover: var(--chocolate-light);
-  
-  /* Accents & Interactive */
-  --accent-primary: var(--carmel);
-  --accent-secondary: var(--dark-wine-light);
-  --link-color: var(--carmel-light);
-  --link-hover: var(--carmel);
-  
-  /* Borders & Shadows */
-  --border-color: var(--chocolate-brown);
-  --border-light: var(--chocolate-light);
-  --shadow-color: rgba(0, 0, 0, 0.4);
-  --shadow-strong: rgba(0, 0, 0, 0.6);
-  
-  /* UI Elements */
-  --nav-bg: rgba(67, 40, 24, 0.95);
-  --nav-item-bg: var(--chocolate-brown);
-  --nav-item-hover: var(--carmel);
-  --header-bg: rgba(255, 230, 167, 0.1);
-  --card-shadow: var(--shadow-color);
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
   margin: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
+  background:
+    var(--bg-gradient-1),
+    var(--bg-gradient-2),
+    var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  animation: page-fade-in 260ms ease-out both;
 }
 
-/* Main content wrapper */
 #root {
-  width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
-/* Section containment */
 section {
   width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
-/* Only constrain and add side effects on large screens */
-@media (min-width: 1441px) {
-  body {
-    background-color: var(--bg-secondary);
-  }
-  
-  #root {
-    max-width: 1440px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    background-color: var(--bg-primary);
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
 }
 
 p {
-  color: var(--text-primary);
+  margin: 0;
 }
 
 a {
-  color: var(--link-color);
+  color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-a:hover {
-  color: var(--link-hover);
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8rem;
+  padding: 0.63rem 1.02rem;
+  border-radius: var(--radius-button);
+  border: 1px solid transparent;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition:
+    transform 150ms ease-out,
+    background-color 180ms ease-out,
+    border-color 180ms ease-out,
+    color 180ms ease-out,
+    box-shadow 180ms ease-out;
+  will-change: transform;
 }
 
-/* === Shared Section Headers === */
-.headers {
-  background-color: var(--header-bg);
-  text-align: center;
-  padding: 1rem;
-  color: var(--text-primary);
+.button:hover {
+  transform: scale(1.02);
 }
 
-/* === Mobile typography === */
-@media (max-width: 480px) {
-  .headers {
-    font-size: 1.5rem;
-    padding: 0.75rem;
+.button-primary {
+  background: var(--brand-600);
+  color: var(--text-on-brand);
+  border-color: color-mix(in oklab, var(--brand-700) 58%, black);
+  box-shadow: 0 4px 14px rgba(42, 69, 77, 0.2);
+}
+
+.button-primary:hover {
+  background: var(--brand-700);
+}
+
+.button-secondary {
+  border-color: var(--border-strong);
+  background: var(--surface-elevated);
+  color: var(--text-secondary);
+}
+
+.button-secondary:hover {
+  border-color: var(--brand-600);
+  color: var(--brand-700);
+  background: var(--brand-100);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--brand-500) 75%, white);
+  outline-offset: 2px;
+}
+
+.reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 220ms ease-out,
+    transform 220ms ease-out;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
-@media (max-width: 360px) {
-  .headers {
-    font-size: 1.25rem;
-    padding: 0.5rem;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-section {
+    opacity: 1;
+    transform: none;
+  }
+
+  body {
+    animation: none !important;
   }
 }
