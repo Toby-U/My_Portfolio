@@ -41,7 +41,7 @@ function Skills() {
             <div className="section">
                 <h2>TeamWork! ⚒️</h2>
                     <p>
-                    I beleive that no man is an Island and collaborating with others to achive a goal is so much esier than doing it alone.Knowing this, im able to communicate and work with others effectively 
+                    I beleive that no man is an Island and collaborating with others to achive a goal is so much easier than doing it alone.Knowing this, im able to communicate and work with others effectively 
 
                         </p>
             </div>
