@@ -17,8 +17,8 @@ const projects: Project[] = [
     description:
       'Built a focused note workflow with simple editing and structured organization for daily use.',
     image: '/note.png',
-    liveUrl: 'https://noti-project-rjzbps5jo-tobennas-projects-f7dc0d34.vercel.app/',
-    repoUrl: 'https://github.com/tobenna',
+    liveUrl: 'https://noti-project.vercel.app/',
+    repoUrl: 'https://github.com/Toby-U/Noti-project',
     tags: ['React', 'TypeScript', 'UX'],
   },
   {
@@ -28,7 +28,7 @@ const projects: Project[] = [
       'Designed and implemented a clean, recruiter-first portfolio with responsive sections and clear CTAs.',
     image: '/portfolio.png',
     liveUrl: '#about',
-    repoUrl: 'https://github.com/tobenna',
+    repoUrl: 'https://github.com/Toby-U/My_Portfolio',
     tags: ['React', 'Vite', 'Design System'],
   },
   {
@@ -36,10 +36,10 @@ const projects: Project[] = [
     title: 'Weather Dashboard',
     description:
       'Created a real-time forecast dashboard with API integration and practical location-based insights.',
-    image: '/weather.png',
-    liveUrl: '#',
-    repoUrl: 'https://github.com/tobenna',
-    tags: ['Python', 'API', 'Data Viz'],
+    image: '/visual.png',
+    liveUrl: 'https://github.com/Toby-U/Libcurl_Cplusplus#',
+    repoUrl: 'https://github.com/Toby-U/Libcurl_Cplusplus#',
+    tags: ['C++', 'API(libcurl)', 'Data Viz'],
   },
   {
     id: 4,
